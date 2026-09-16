@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interestelar - CineFront</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/variaveis.css">
+    <link rel="stylesheet" href="../css/estrutura.css">
+    <link rel="stylesheet" href="../css/filme-detalhe.css">
+
+    <script type="text/javascript" src="../js/dados/filmes.js" defer></script>
+    <script type="text/javascript" src="../js/main.js" defer></script>
+    <script type="text/javascript" src="../js/filme-detalhe.js" defer></script>
+
+</head>
+<body>
+    
+    
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">CineFront</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" data-bs-theme="dark" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>                                                
+                        <li class="nav-item">
+                            <a class="nav-link" href="recomendar.html">Recomendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mais-assistidos.html">Mais Assistidos</a>
+                        </li>   
+                        <li>
+                            <button id="btnTema" class="btn btn-dark">
+                                ☀️
+                            </button>
+                        </li>                     
+                    </ul>
+                    
+
+                    <ul class="navbar-nav d-lg-none">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Todos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Ação</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Comédia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Drama</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Ficção Cientifica</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Terror</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Séries</a>
+                        </li>   
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Romance</a>
+                        </li>                               
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col ps-5 pe-5 mx-auto">
+                    <form class="d-flex p-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar filme/série" required  minlength="3" />
+                        <button class="btn btn-primary" type="submit" id="btnBusca">Buscar</button>
+                    </form>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  mx-auto">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Todos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Ação</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Comédia</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Drama</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Ficção Cientifica</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Terror</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Séries</a>
+            </li>   
+            <li class="nav-item">
+            <a class="nav-link" href="#">Romance</a>
+            </li>                               
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <main class="container mt-2">
+        <!--inicio bloco-->
+        <div class="row">
+            <div class="col-sm-8 col-lg-4">
+                <img src="" id="imagemFilme" class="img-fluid rounded" />
+
+                <section class="my-5 avaliacao">
+                <h2>Avaliação da turma</h2>
+
+                <p class="estrelas" aria-label="Nota 4 de 5">
+                    ★ ★ ★ ★ ☆
+                </p>
+
+                <p>Nota média: 4.0/5</p>
+                </section>
+
+
+            </div>
+            <div class="col-sm-4 col-lg-8">
+                <h1 id="tituloFilme"></h1>
+                <p id="sinopseCompleta" class="d-none">
+                    As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.
+                </p>
+                <section id="ficha-tecnica" class="my-5">
+                    <h2>Ficha Tecnica</h2>                  
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Ano:</strong> 2014</li>
+                        <li class="list-group-item"><strong>Duração:</strong> 2h49min</li>
+                        <li class="list-group-item"><strong>Genero:</strong> Ficção Cientifica</li>
+                        <li class="list-group-item"><strong>Direção:</strong> Chirstopher Nolan</li>
+                    </ul>
+                </section>                 
+
+                <aside class="my-5 onde-assistir">
+                    <h2>Onde assistir</h2>
+
+                    <ul class="list-inline">
+                        <li class="list-inline-item badge text-bg-primary">Max</li>
+                        <li class="list-inline-item badge text-bg-dark">Prime Video</li>
+                        <li class="list-inline-item badge text-bg-danger">Netflix</li>
+                    </ul>
+                </aside>
+                
+                <a href="#trailer" class="btn btn-primary">🎬 Assita ao Trailer</a>
+                <a href="#relacionados" class="btn btn-primary">🎞️ Filmes Relacionados</a>
+                <button id="btnSinopse" class="btn btn-primary">Mostrar Sinopse</button>
+
+            </div>
+        </div>
+        <!--fim bloco-->
+        <div class="row m-3" id="artistasRelacionados">
+            <h3>Artistas Relacionados</h3>
+                     
+        </div>
+
+
+        <section id="relacionados" class="my-5">
+            <h2>Filmes relacionados</h2>
+
+            <div id="listaFilmesRelacionados" class="row g-3"></div>
+            
+        </section>
+
+        <!-- <section id="informacoes" class="my-5">
+            <h2>Informações do filme</h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr><th scope="row">Ano</th><td>2014</td></tr>
+                        <tr><th scope="row">Duração</th><td>2h49min</td></tr>
+                        <tr><th scope="row">Gênero</th><td>Ficção Cientifica</td></tr>
+                        <tr><th scope="row">Direção</th><td>dChirstopher Nolan</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section> -->
+
+        <section id="trailer" class="my-5">
+            <h2>Trailer</h2>
+
+            <div class="ratio ratio-16x9">
+                <iframe id="trailerFilme"
+                src="https://www.youtube.com/embed/i6avfCqKcQo"
+                title="Trailer do filme Interestelar"
+                allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <div class="row text-center m-5">
+                <div class="d-grid col-6 mx-auto">
+                        <a href="../index.html" class="btn btn-primary">
+                            <- Voltar
+                        </a>
+                </div>           
+        </div>
+
+
+        <section class="my-5 comentarios">
+        <h2>Comentários da turma</h2>
+
+        <article class="comentario">
+            <h3>Comentário de Ana</h3>
+            <p>Gostei do filme porque mistura emoção e ficção científica.</p>
+        </article>
+
+        <article class="comentario">
+            <h3>Comentário de Lucas</h3>
+            <p>A fotografia e a trilha sonora chamaram atenção.</p>
+        </article>
+        </section>
+
+
+
+    </main>
+
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Newsletter</h5>
+                        <p>Recebe novidades do CineFront.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                             <label for="newsletter1" class="visually-hidden">E-mail</label>
+                             <input id="newsletter1" type="email" class="form-control" placeholder="Digite seu e-mail" required>
+                             <button class="btn btn-primary" type="submit">Assinar</button> </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2025 Company, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

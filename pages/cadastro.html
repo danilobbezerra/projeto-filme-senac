@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CineFront</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/variaveis.css">
+    <link rel="stylesheet" href="../css/estrutura.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+    <script type="text/javascript" src="../js/main.js" defer></script>
+    <script type="text/javascript" src="../js/cadastro.js" defer></script>
+
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">CineFront</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" data-bs-theme="dark" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>                                                          
+                        <li class="nav-item">
+                            <a class="nav-link" href="recomendar.html">Recomendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mais-assistidos.html">Mais Assistidos</a>
+                        </li>
+                        <li>
+                            <button id="btnTema" class="btn btn-dark">
+                                ☀️
+                            </button>
+                        </li>                                                
+                    </ul>
+                    
+
+                    <ul class="navbar-nav d-lg-none">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Todos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Ação</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Comédia</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Drama</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Ficção Cientifica</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Terror</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Séries</a>
+                        </li>   
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Romance</a>
+                        </li>                               
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col ps-5 pe-5 mx-auto">
+                    <form class="d-flex p-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar filme/série" required  minlength="3"/>
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </form>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  mx-auto">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Todos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Ação</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Comédia</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Drama</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Ficção Cientifica</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Terror</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Séries</a>
+            </li>   
+            <li class="nav-item">
+            <a class="nav-link" href="#">Romance</a>
+            </li>                               
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+
+    <main class="container">
+
+        <h1>Cadastro</h1>
+
+        <form class="row g-3 needs-validation" id="formCadastro">
+
+            <!-- Nome -->
+            <div class="col-md-12">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome completo"
+                    required
+                    tabindex="1"
+                    >
+                <div class="invalid-feedback">
+                    Informe seu nome completo.
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">E-mail</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                    required
+                    tabindex="2"
+                    >
+                <div class="invalid-feedback">
+                    Informe um e-mail válido.
+                </div>
+            </div>
+
+            <!-- Data de Nascimento -->
+            <div class="col-md-6">
+                <label for="nascimento" class="form-label">Data de Nascimento</label>
+                <input
+                    type="date"
+                    class="form-control"
+                    id="nascimento"
+                    name="nascimento"
+                    required
+                    tabindex="3"
+                    >
+                <div class="invalid-feedback">
+                    Informe sua data de nascimento.
+                </div>
+            </div>
+
+            <!-- Senha -->
+            <div class="col-md-6">
+                <label for="senha" class="form-label">Senha</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="senha"
+                    name="senha"
+                    maxlength="20"
+                    tabindex="4"
+                    required>
+                <div class="invalid-feedback">
+                    Senha inválida
+                </div>                      
+                <div class="form-text">
+                    Mínimo de 8 caracteres.
+                </div>
+              
+            </div>
+
+            <!-- Confirmar Senha -->
+            <div class="col-md-6">
+                <label for="senha2" class="form-label">Confirmar Senha</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="senhaConfirmacao"
+                    name="senhaConfirmacao"
+                    tabindex="5"
+                    required>
+                <div class="invalid-feedback">
+                    Confirme sua senha.
+                </div>
+            </div>
+
+            <div class="progress">
+                <div id="barraSenha" class="progress-bar"></div>
+            </div>
+            <p id="textoForcaSenha">Digite uma senha.</p>
+
+
+            <!-- Gênero Favorito -->
+            <div class="col-md-12">
+                <label class="form-label d-block">Gêneros Preferidos</label>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="acao">
+                    <label class="form-check-label" for="acao">Ação</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="comedia">
+                    <label class="form-check-label" for="comedia">Comédia</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="drama">
+                    <label class="form-check-label" for="drama">Drama</label>
+                </div> 
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="ficao-cientifica">
+                    <label class="form-check-label" for="ficao-cientifica">Ficção Cientifica</label>
+                </div>  
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="terror">
+                    <label class="form-check-label" for="terror">Terror</label>
+                </div>  
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="romance">
+                    <label class="form-check-label" for="romance">Romance</label>
+                </div>  
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="generos" value="series">
+                    <label class="form-check-label" for="series">Séries</label>
+                </div>  
+
+            </div>
+
+            <!-- Como Conheceu -->
+            <div class="col-md-12">
+                <label for="como-conheceu" class="form-label">Como nos conheceu?</label>
+                <select
+                    id="como-conheceu"
+                    name="como-conheceu"
+                    class="form-select"
+                    required
+                    >
+                    <option value="">Selecione...</option>
+                    <option value="google">Google</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="indicacao">Indicação</option>
+                </select>
+            </div>
+
+            <!-- Termos -->
+            <div class="col-md-12">
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="termo"
+                        name="termo">
+                    <label class="form-check-label" for="termo">
+                        Li e aceito os termos e condições de uso.
+                    </label>
+                    <div class="invalid-feedback">
+                        É necessário aceitar os termos para continuar.
+                    </div>                    
+                </div>
+
+            </div>
+
+            <!-- Botões -->
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary" id="btnEnviar">
+                    <i class="bi bi-send"></i> Enviar
+                </button>
+
+                <button type="reset" class="btn btn-outline-secondary">
+                    Limpar
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Newsletter</h5>
+                        <p>Recebe novidades do CineFront.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                             <label for="newsletter1" class="visually-hidden">E-mail</label>
+                             <input id="newsletter1" type="email" class="form-control" placeholder="Digite seu e-mail" required>
+                             <button class="btn btn-primary" type="submit">Assinar</button> </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2025 Company, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+</body>
+</html>

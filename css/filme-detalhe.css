@@ -1,0 +1,23 @@
+.estrelas {
+  color: #F2C94C;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.filme-detalhe section,
+.filme-detalhe aside {
+  margin-bottom: 48px;
+}
+
+.onde-assistir {
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #f2f6f8;
+}
+
+.comentario {
+  padding: 16px;
+  border-left: 4px solid var(--cine-escuro);
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}

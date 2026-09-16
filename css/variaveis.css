@@ -1,0 +1,11 @@
+:root {
+  --cine-principal: #ffc107;
+  --cine-escuro: #111827;
+  --cine-claro: #f8f9fa;
+  --cine-texto: #212529;
+  --espaco-secao: 4rem;
+  --cine-erro: #dc3545;
+  --cine-sucesso: #198754;
+  --cine-raio: 8px;
+  --cine-transicao: .3s;
+}
