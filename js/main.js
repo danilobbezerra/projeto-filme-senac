@@ -65,7 +65,7 @@ function MontaCardFilme(objListaFilmes, listaDeFilmes, tirarAno){
     {
         listaDeFilmes.forEach(function(filme) {
 
-            const linkCorrente = `pages/detalhe.html?id=${filme.id}`;
+            const linkCorrente = `https://danilobbezerra.github.io/projeto-filme-senac/pages/detalhe.html?id=${filme.id}`;
             const minhaImagem = `<img src="${filme.imagem}" alt="${filme.titulo}" class="card-img-top"></img>`
             
             const cardComAno = `
